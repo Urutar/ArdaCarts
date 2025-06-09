@@ -6,6 +6,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginDescriptionFile;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -64,7 +65,11 @@ public class MessageHandler {
 				break;
 			}
 			case Speedup: {
-				String message = ConfigHandler.getConfigMessage(Constants.MESSAGES_SPEEDUP);
+				int activationTime = ConfigHandler.getConfigInt(Constants.CONFIG_ACTIVATION_TIME);
+				// Activation time is in ticks - 20 for 1 second
+				double minutes = activationTime / 1200.0;
+				DecimalFormat format = new DecimalFormat("0.#");
+				String message = ConfigHandler.getConfigMessage(Constants.MESSAGES_SPEEDUP, "%minutes%",format.format(minutes) );
 				sender.sendMessage(message);
 
 				String messageSpeedupOther = ConfigHandler.getConfigMessage(Constants.MESSAGES_SPEEDUP_OTHER, "%sendername%", sender.getName());

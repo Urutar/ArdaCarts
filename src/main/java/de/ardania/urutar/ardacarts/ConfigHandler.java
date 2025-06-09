@@ -14,6 +14,9 @@ public class ConfigHandler {
     }
 
     public static String getConfigText(String name) {
+        String text = _config.getString(name);
+        if (text == null)
+            return "";
         return _config.getString(name);
     }
 
@@ -24,14 +27,10 @@ public class ConfigHandler {
 
     public static String getConfigMessage(String name, String variable, String replacement) {
         String message = getConfigText(name);
-        if (message == null)
-            return null;
-        return ChatColor.translateAlternateColorCodes('&', message.replace(variable, replacement));
+        return translateColorCodes(message.replace(variable, replacement));
     }
 
     private static String translateColorCodes(String message) {
-        if (message == null)
-            return null;
         return ChatColor.translateAlternateColorCodes('&', message);
     }
 
