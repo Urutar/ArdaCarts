@@ -59,7 +59,6 @@ public class EventListener implements Listener {
         Block cartBlock = cartLocation.getBlock();
         Block checkBlock = cartBlock.getRelative(BlockFace.DOWN, 3);
 
-        // TODO: Check if this is correct
         double speedLimit = 0.4;
         if (checkBlock.getType() == speedMaterial) {
             speedLimit = vel;
