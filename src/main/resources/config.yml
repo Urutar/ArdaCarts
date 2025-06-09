@@ -1,0 +1,41 @@
+CONFIG:
+   # Activation time in tick - 20 for 1 second
+   ActivationTime: 18000
+   # Maximum speed cap a cart can go - 0.4 in vanilla mc
+   MaxSpeed: 2.0
+   # Only carts with this specific name will increase speed
+   # -> /summon minecart ~ ~ ~ {CustomName:'{"text":"ardabahn"}'}
+   EntityName: "ardabahn"
+   # Costs for running the speedup command - set to 0 to disable costs
+   Price: 0
+   # Blocktype that changes the max speed of a minecart
+   # -> https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+   BlockType: BARRIER
+   # Used only for debugging
+   Debug: false
+
+MESSAGES:
+   AlreadyRunning: "&cDie Minecarts fahren bereits schneller!"
+   AlreadySlow: "&cDie Minecarts fahren bereits mit normaler Geschwindigkeit."
+   Error: "&cEs ist ein Fehler aufgetreten."
+   Help: "&f[&2Ardabahn&f] &3Befehlsliste:"
+   InvalidCommand: "&cUnbekannter Befehl!"
+   NoMoney: "&cDas kannst du dir nicht leisten! Du benötigst &6%price% Euronen&c."
+   NoPermission: "&cDas darfst du nicht tun!"
+   Reload: "&aArdaCarts wurde neu geladen."
+   Slowdown: "&f[&2Ardabahn&f] &3Die Minecarts fahren wieder mit normaler Geschwindigkeit."
+   Speedup: "&f[&2Ardabahn&f] &3Die Minecarts der Ardabahn fahren nun für &b15 Minuten&3 schneller."
+   SpeedupOther: "&f[&2Ardabahn&f] &a%sendername%&3 sind die Loren zu langsam und beschleunigt sie."
+   Version: "&3Aktuelle Version: &a"
+
+COMMANDS:
+   Slowdown: "&a/ardacarts slowdown"
+   Speedup: "&a/ardacarts speedup"
+   Reload: "&a/ardacarts reload"
+   Version: "&a/ardacarts version"
+
+DESCRIPTION:
+   Slowdown: "&7 - Verlangsamt alle Minecarts der Ardabahn."
+   Speedup: "&7 - Beschleunigt alle Minecarts der Ardabahn."
+   Reload: "&7 - Lädt das Plugin neu."
+   Version: "&7 - Zeigt Version des Plugins."

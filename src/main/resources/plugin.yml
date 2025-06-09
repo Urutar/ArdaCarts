@@ -1,0 +1,40 @@
+CONFIG:
+name: ArdaCarts
+main: de.ardania.urutar.ardacarts.ArdaCarts
+version: 2.0
+authors:
+  - Sandukhan
+  - Urutar
+description: Accelerates minecarts past normal speed limits
+api-version: 1.21.4
+softdepend: [Vault]
+
+commands:
+   ardacarts:
+      description: Help Page
+      usage: /<command> help
+
+permissions:
+  ardacarts.*:
+    description: Allows access to all commands
+    children:
+      ardacarts.help: true
+      ardacarts.reload: true
+      ardacarts.version: true
+      ardacarts.slowdown: true
+      ardacarts.speedup: true
+  ardacarts.help:
+    description: Allows help command
+    default: true
+  ardacarts.reload:
+    description: Allows reload command
+    default: op
+  ardacarts.version:
+    description: Allows version command
+    default: op
+  ardacarts.slowdown:
+    description: Allows slowdown command
+    default: op
+  ardacarts.speedup:
+    description: Allows speedup command
+    default: true
