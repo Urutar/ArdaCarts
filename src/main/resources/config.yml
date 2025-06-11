@@ -24,7 +24,7 @@ MESSAGES:
    NoPermission: "&cDas darfst du nicht tun!"
    Reload: "&aArdaCarts wurde neu geladen."
    Slowdown: "&f[&2Ardabahn&f] &3Die Minecarts fahren wieder mit normaler Geschwindigkeit."
-   Speedup: "&f[&2Ardabahn&f] &3Die Minecarts der Ardabahn fahren nun für &b15 Minuten&3 schneller."
+   Speedup: "&f[&2Ardabahn&f] &3Die Minecarts der Ardabahn fahren nun für &b%time% Minuten&3 schneller."
    SpeedupOther: "&f[&2Ardabahn&f] &a%sendername%&3 sind die Loren zu langsam und beschleunigt sie."
    Version: "&3Aktuelle Version: &a"
 
